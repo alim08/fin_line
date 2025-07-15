@@ -1,0 +1,161 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+dist/
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# Go workspace file
+go.work
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+
+# Log files
+*.log
+logs/
+log/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# JWT Keys and certificates
+keys/
+*.pem
+*.key
+*.crt
+*.cert
+*.p12
+*.pfx
+
+# Redis dump files
+dump.rdb
+*.rdb
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build artifacts
+build/
+target/
+
+# Coverage reports
+coverage.txt
+coverage.html
+coverage.out
+
+# Profiling data
+*.prof
+*.pprof
+
+# Air live reload
+tmp/
+
+# Docker
+.dockerignore
+Dockerfile.dev
+
+# Kubernetes
+*.yaml.bak
+*.yml.bak
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Ansible
+*.retry
+
+# Node.js (if using any frontend tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (if using any Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Archive files
+*.tar.gz
+*.zip
+*.rar
+
+# Local configuration overrides
+config.local.yaml
+config.local.yml
+config.local.json
+
+# Application specific
+data/
+cache/
+uploads/
+downloads/
+
+# Monitoring and metrics
+prometheus_data/
+grafana_data/
+
+# SSL certificates
+ssl/
+certs/
+
+# Local development files
+.local/
+local/
+
+IMPLMENTATION_ASSESSMENT.md
+IMPLEMENTATION_GUIDE.md

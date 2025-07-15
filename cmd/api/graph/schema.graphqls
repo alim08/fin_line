@@ -1,0 +1,71 @@
+scalar Time
+scalar Float
+
+type Quote {
+  ticker: String!
+  price: Float!
+  timestamp: Time!
+  sector: String
+}
+
+type Anomaly {
+  id: String!
+  ticker: String!
+  price: Float!
+  threshold: Float!
+  type: String!
+  timestamp: Time!
+  severity: String!
+}
+
+type MarketStats {
+  totalTickers: Int!
+  totalQuotes: Int!
+  avgPrice: Float
+  lastUpdate: Time!
+}
+
+type Query {
+  # Quote queries
+  quotes(limit: Int, ticker: String, sector: String): [Quote!]!
+  quote(ticker: String!): Quote
+  latestQuotes: [Quote!]!
+  
+  # Anomaly queries
+  anomalies(limit: Int, severity: String, type: String): [Anomaly!]!
+  anomaliesByTicker(ticker: String!): [Anomaly!]!
+  
+  # Market data queries
+  tickers: [String!]!
+  sectors: [String!]!
+  marketStats: MarketStats!
+}
+
+type Mutation {
+  # Anomaly mutations
+  createAnomaly(input: CreateAnomalyInput!): Anomaly!
+  updateAnomaly(id: String!, input: UpdateAnomalyInput!): Anomaly!
+  deleteAnomaly(id: String!): Boolean!
+}
+
+type Subscription {
+  # Real-time subscriptions
+  quoteUpdated(ticker: String): Quote!
+  anomalyDetected(severity: String): Anomaly!
+  marketUpdate: MarketStats!
+}
+
+input CreateAnomalyInput {
+  ticker: String!
+  price: Float!
+  threshold: Float!
+  type: String!
+  severity: String
+}
+
+input UpdateAnomalyInput {
+  price: Float
+  threshold: Float
+  type: String
+  severity: String
+} 
