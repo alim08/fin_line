@@ -15,6 +15,20 @@ A high-performance, real-time financial market data processing pipeline built wi
 - **Docker Support**: Containerized deployment
 - **Health Checks**: Built-in health monitoring and readiness probes
 
+## 🧰 Tech Stack
+
+- **Language:** Go 1.21+
+- **API:** GraphQL (gqlgen), REST (net/http, gorilla/mux)
+- **Database:** PostgreSQL (lib/pq)
+- **Cache & Messaging:** Redis Streams (go-redis)
+- **Authentication:** JWT (golang-jwt), RSA keys
+- **WebSockets:** gorilla/websocket
+- **Validation:** go-playground/validator
+- **Monitoring:** Prometheus (client_golang)
+- **Logging:** Uber Zap
+- **Containerization:** Docker, Docker Compose
+- **Other:** Make, OpenSSL (for key generation)
+
 ## 🏗️ Architecture
 
 ```
